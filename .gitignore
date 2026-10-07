@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.vite
+npm-debug.log*
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# working copies of the photographs; the deck uses public/photos
+/*.png
+/*.jpg

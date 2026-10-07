@@ -1,0 +1,93 @@
+/* ============================================================
+   NextEd design tokens. Single source of truth for the deck.
+   Inherited SCSU primaries plus the one NextEd accent, Gateway Blue.
+   Rule: blue marks what moves forward (links, focus, progress, the
+   second beat of a headline). Red marks the institution. Anything
+   doing neither is black, gray, or gone.
+   ============================================================ */
+
+:root {
+  /* type */
+  --font-display: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+  --font-body: 'Roboto', Helvetica, Arial, sans-serif;
+
+  /* brand constants (fills, rules, beams; not text in dark mode) */
+  --spirit-red: #CD1041;
+  --spirit-red-deep: #A70D34;
+  --granite: #000000;
+  --blizzard: #FFFFFF;
+  --silver: #A6B0B7;
+  --gateway: #0563F7;
+  --gateway-deep: #0A47B8;
+  --gateway-light: #4D8BFF;
+  --gateway-wash: #E8F0FE;
+  --bold-orange: #F58220;
+  --glacier: #718C9A;
+  --success: #1D7A4C;
+
+  /* neutrals derived from Silver Gray */
+  --n50: #F7F8F9;
+  --n100: #F4F5F6;
+  --n200: #E4E7E9;
+  --n300: #C9CFD3;
+  --n400: #A6B0B7;
+  --n500: #6B757C;
+  --n600: #3F464B;
+  --n700: #2A2E31;
+  --n800: #1F2225;
+  --n900: #151719;
+
+  /* layout */
+  --deck-max: 1280px;
+  --radius: 0px;
+  --shadow: 0 8px 24px rgba(16, 16, 16, 0.16);
+  --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+  --focus: 0 0 0 3px var(--bg), 0 0 0 6px var(--link);
+}
+
+/* ---- Light ---- */
+:root,
+[data-theme='light'] {
+  --bg: #FFFFFF;
+  --surface: #F4F5F6;
+  --raised: #FFFFFF;
+  --line: #E4E7E9;
+  --line-strong: #101010;
+  --ink: #101010;
+  --ink-soft: #2A2E31;
+  --ink-muted: #6B757C;
+  --red: #CD1041;          /* text-safe red */
+  --blue: #0563F7;         /* text-safe blue, 16px and up */
+  --link: #0563F7;
+  --link-hover: #0A47B8;
+  --wash: #E8F0FE;
+  --warn-text: #8A4A05;
+  --warn-fill: #FFF4E8;
+  --ok-fill: #E9F5EE;
+  --err-fill: #FDECF0;
+  --overlay: rgba(16, 16, 16, 0.55);
+  --dots: rgba(166, 176, 183, 0.55);
+}
+
+/* ---- Dark ---- */
+[data-theme='dark'] {
+  --bg: #151719;
+  --surface: #1F2225;
+  --raised: #1F2225;
+  --line: #3F464B;
+  --line-strong: #C9CFD3;
+  --ink: #F4F5F6;
+  --ink-soft: #C9CFD3;
+  --ink-muted: #A6B0B7;
+  --red: #FF4D70;
+  --blue: #4D8BFF;
+  --link: #4D8BFF;
+  --link-hover: #7FA9FF;
+  --wash: rgba(77, 139, 255, 0.14);
+  --warn-text: #F5B26B;
+  --warn-fill: rgba(245, 130, 32, 0.14);
+  --ok-fill: rgba(29, 122, 76, 0.18);
+  --err-fill: rgba(255, 77, 112, 0.14);
+  --overlay: rgba(0, 0, 0, 0.7);
+  --dots: rgba(166, 176, 183, 0.22);
+}
