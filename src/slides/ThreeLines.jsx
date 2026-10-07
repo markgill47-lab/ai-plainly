@@ -1,5 +1,6 @@
 import Slide from '../components/Slide.jsx'
 import { reveal } from './shared.js'
+import Qr from '../components/Qr.jsx'
 
 const LINES = [
   'It added more to my week than any technology in thirty years, and I was the novice.',
@@ -10,7 +11,8 @@ const LINES = [
 export default function ThreeLines({ phase, slide }) {
   return (
     <Slide slide={slide} title={<>Three lines to <em>take home</em></>} beams="small">
-      <div style={{ width: '100%', maxWidth: 980, display: 'flex', flexDirection: 'column', gap: 18 }}>
+      <div className="with-qr">
+      <div style={{ flex: '1 1 0', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 18 }}>
         {LINES.map((l, i) => (
           <div key={i} style={{ display: 'flex', gap: 22, alignItems: 'flex-start', borderTop: '1px solid var(--line)', paddingTop: 16, ...reveal(phase >= i) }}>
             <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 40, lineHeight: 1, color: 'var(--red)', width: 48, flexShrink: 0 }}>{i + 1}</div>
@@ -21,6 +23,8 @@ export default function ThreeLines({ phase, slide }) {
           <span className="chip">Open to Chamber members</span>
           <span className="lead" style={{ fontSize: 17 }}>NextEd Lab is open to anyone who wants to see the engine run. <a href="mailto:mcgill@stcloudstate.edu">mcgill@stcloudstate.edu</a></span>
         </div>
+      </div>
+      <Qr size={170} caption="This deck" />
       </div>
     </Slide>
   )

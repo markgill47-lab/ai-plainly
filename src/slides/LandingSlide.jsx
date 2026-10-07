@@ -1,4 +1,5 @@
 import { useApp } from '../context/AppContext.jsx'
+import Qr from '../components/Qr.jsx'
 
 export default function LandingSlide() {
   const { next } = useApp()
@@ -27,6 +28,7 @@ export default function LandingSlide() {
             <span className="small">← / → to navigate · N speaker notes · M index · T theme</span>
           </div>
         </div>
+        <Qr className="corner" size={170} />
       </div>
     </section>
   )
